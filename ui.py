@@ -28,6 +28,7 @@ def render_sidebar():
         st.header("❗ **So verwenden Sie diese App**")
         st.markdown("""
             1. **Geben Sie Ihren OpenAI-API-Schlüssel ein**...
+            * Info zu Api-Schlüsseln 👉 Video unten ...
             2. **Laden Sie eine PDF, DOCX oder bis zu 10 Bilder hoch**...
             3. **Sprache auswählen**...
             4. **Fragetypen auswählen**...
@@ -35,6 +36,13 @@ def render_sidebar():
             6. **Generierte Inhalte herunterladen**...
         """)
         # ... (All other st.markdown, components.html, etc. from your original sidebar go here)
+        # YouTube-Video in die Seitenleiste einbetten
+        components.html("""
+            <iframe width="100%" height="180" src="https://www.youtube.com/embed/NsTAjBdHb1k" 
+            title="Demo-Video auf Deutsch" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        """, height=180)
 
         st.header("💬 Kontakt")
         st.markdown("Für Unterstützung... **Kontakt**: [Pietro](mailto:pietro.rossi@bbw.ch)")
