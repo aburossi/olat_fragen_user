@@ -111,8 +111,8 @@ def get_chatgpt_response(client, prompt, model, images, selected_language, reaso
             response = client.chat.completions.create(
                 model=model,
                 messages=messages,
-                max_tokens=4096,
-                temperature=0.6
+                max_tokens=15000,
+                temperature=0.4
             )
             if response.usage:
                 st.info(f"📊 Token Usage: Prompt={response.usage.prompt_tokens}, Completion={response.usage.completion_tokens}")
